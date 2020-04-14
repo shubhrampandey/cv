@@ -89,7 +89,7 @@ if(PDF_EXPORT){
 }
 ```
 
-Contact {#contact}
+Contact & Links {#contact}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -99,23 +99,23 @@ contact_info %>%
 
 
 
-Language Skills {#skills}
---------------------------------------------------------------------------------
+<!-- Language Skills {#skills} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-```{r}
-build_skill_bars(skills)
-```
+<!-- ```{r} -->
+<!-- build_skill_bars(skills) -->
+<!-- ``` -->
 
 
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+<!-- Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).  -->
 
-The source code is available at [github.com/AntoineSoetewey/cv](https://github.com/AntoineSoetewey/cv).
+<!-- The source code is available at [github.com/AntoineSoetewey/cv](https://github.com/AntoineSoetewey/cv). -->
 
-Last updated on `r Sys.Date()`.
+Last updated on `r format(Sys.time(), '%B %d, %Y')`.
 
 
 
@@ -138,31 +138,8 @@ Education {data-icon=graduation-cap data-concise=true}
 print_section(position_data, 'education')
 ```
 
-
-
-Research Experience {data-icon=laptop}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'research_positions')
-```
-
-
-
-Industry Experience {data-icon=suitcase}
---------------------------------------------------------------------------------
-
-::: aside
-```{r}
-print_text_block(text_blocks, 'industy_experience_aside')
-```
-:::
-
-```{r}
-print_section(position_data, 'industry_positions')
-```
-
 <!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
 <br>
 <br>
 <br>
@@ -170,60 +147,106 @@ print_section(position_data, 'industry_positions')
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
-::: aside
-```{r}
-print_text_block(text_blocks, 'teaching_experience_aside')
-```
-:::
+<!-- ::: aside -->
+<!-- ```{r} -->
+<!-- print_text_block(text_blocks, 'teaching_experience_aside') -->
+<!-- ``` -->
+<!-- ::: -->
 
 ```{r}
 print_section(position_data, 'teaching_positions')
 ```
 
-
-
-Selected Data Science Writing {data-icon=chart-line}
+Professional Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
-::: aside
-```{r}
-print_text_block(text_blocks, 'data_science_writing_aside')
-```
-:::
+<!-- ::: aside -->
+<!-- ```{r} -->
+<!-- print_text_block(text_blocks, 'industy_experience_aside') -->
+<!-- ``` -->
+<!-- ::: -->
 
 ```{r}
-print_section(position_data, 'data_science_writings')
+print_section(position_data, 'industry_positions')
 ```
 
-
-
-Selected Press (About)  {data-icon=newspaper}
+Research {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
-print_section(position_data, 'about_me_press')
+print_section(position_data, 'research_positions')
 ```
 
-
-<br>
-<br>
-
-
-Selected Press (By)  {data-icon=newspaper}
+Other {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
 ```{r}
-print_section(position_data, 'by_me_press')
+print_section(position_data, 'other_positions')
 ```
 
-
-
-Selected Publications, Posters, and Talks {data-icon=book}
+Software {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
-print_section(position_data, 'academic_articles')
+print_section(position_data, 'software')
 ```
+
+Associations {data-icon=chart-line}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'associations')
+```
+
+Languages {data-icon=language}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'languages')
+```
+
+<!-- Selected Data Science Writing {data-icon=chart-line} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ::: aside -->
+<!-- ```{r} -->
+<!-- print_text_block(text_blocks, 'data_science_writing_aside') -->
+<!-- ``` -->
+<!-- ::: -->
+
+<!-- ```{r} -->
+<!-- print_section(position_data, 'data_science_writings') -->
+<!-- ``` -->
+
+
+
+<!-- Selected Press (About)  {data-icon=newspaper} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- print_section(position_data, 'about_me_press') -->
+<!-- ``` -->
+
+
+<!-- <br> -->
+<!-- <br> -->
+
+
+<!-- Selected Press (By)  {data-icon=newspaper} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- print_section(position_data, 'by_me_press') -->
+<!-- ``` -->
+
+
+
+<!-- Selected Publications, Posters, and Talks {data-icon=book} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- print_section(position_data, 'academic_articles') -->
+<!-- ``` -->
 
 
 
