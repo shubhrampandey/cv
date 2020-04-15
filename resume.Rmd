@@ -1,5 +1,5 @@
 ---
-title: Antoine Soetewey's Resume"
+title: "Antoine Soetewey's Resume"
 author: Antoine Soetewey
 date: "`r Sys.Date()`"
 output:
