@@ -7,6 +7,7 @@ output:
     css: ['css/custom_resume.css', 'css/styles.css', 'resume']
     # set it to true for a self-contained HTML page but it'll take longer to render
     self_contained: true
+knit: pagedown::chrome_print
 ---
 
 
@@ -86,40 +87,35 @@ contact_info %>%
 
 
 
-Language Skills {#skills}
+<!-- Language Skills {#skills} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- build_skill_bars(skills) -->
+<!-- ``` -->
+
+
+
+Software {#open-source}
 --------------------------------------------------------------------------------
 
-```{r}
-build_skill_bars(skills)
-```
-
-
-
-Open Source Contributions {#open-source}
---------------------------------------------------------------------------------
-
-All projects available at `github.com/AntoineSoetewey/<name>`
-
-
-- `shinysense`: R package to use sensor data in Shiny apps
-- `tuftesque`: Hugo theme (behind LiveFreeOrDichotomize.com)
-- `sbmR`: R package for fitting stochasitic block models
+All projects available at: <br /> [antoinesoetewey.com/soft](https://www.antoinesoetewey.com/software/)
 
 
 More info {#more-info}
 --------------------------------------------------------------------------------
 
-See full CV at antoinesoetewey.com/cv for more complete list of positions and publications.
+See full CV at: <br /> [antoinesoetewey.com/cv](https://www.antoinesoetewey.com/cv.html)
 
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made w/ [**pagedown**](https://github.com/rstudio/pagedown). 
+<!-- Made w/ [**pagedown**](https://github.com/rstudio/pagedown).  -->
 
-Source code: [github.com/AntoineSoetewey/cv](https://github.com/AntoineSoetewey/cv).
+<!-- Source code: [github.com/AntoineSoetewey/cv](https://github.com/AntoineSoetewey/cv). -->
 
-Last updated on `r Sys.Date()`.
+Last updated on `r format(Sys.time(), '%B %d, %Y')`.
 
 
 
@@ -142,22 +138,70 @@ Education {data-icon=graduation-cap data-concise=true}
 position_data %>% print_section('education')
 ```
 
-
-
-Selected Positions {data-icon=suitcase}
+Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ```{r}
-position_data %>% print_section('positions')
+print_section(position_data, 'teaching_positions')
 ```
 
+<!-- Professional Experience {data-icon=suitcase} -->
+<!-- -------------------------------------------------------------------------------- -->
 
+<!-- ```{r} -->
+<!-- print_section(position_data, 'industry_positions') -->
+<!-- ``` -->
 
-Selected Writing {data-icon=newspaper}
+Research {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
-position_data %>% print_section('writings')
+print_section(position_data, 'research_positions_resume')
 ```
+
+Writing {data-icon=newspaper}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'writing_positions')
+```
+
+<!-- Software {data-icon=laptop} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- print_section(position_data, 'software') -->
+<!-- ``` -->
+
+<!-- Associations {data-icon=chart-line} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- print_section(position_data, 'associations') -->
+<!-- ``` -->
+
+<!-- Languages {data-icon=language} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- print_section(position_data, 'languages') -->
+<!-- ``` -->
+
+
+<!-- Selected Positions {data-icon=suitcase} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- position_data %>% print_section('positions') -->
+<!-- ``` -->
+
+
+
+<!-- Selected Writing {data-icon=newspaper} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- position_data %>% print_section('writings') -->
+<!-- ``` -->
 
 

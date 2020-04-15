@@ -98,6 +98,10 @@ contact_info %>%
   glue_data("- <i class='fa fa-{icon}'></i> {contact}")
 ```
 
+Software {#open-source}
+--------------------------------------------------------------------------------
+
+All projects available at: <br /> [`antoinesoetewey.com/soft`](https://www.antoinesoetewey.com/software/)
 
 
 <!-- Language Skills {#skills} -->
@@ -158,7 +162,21 @@ Teaching Experience {data-icon=chalkboard-teacher}
 print_section(position_data, 'teaching_positions')
 ```
 
-Professional Experience {data-icon=suitcase}
+Research {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'research_positions')
+```
+
+Writing {data-icon=newspaper}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'writing_positions')
+```
+
+Industry Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 <!-- ::: aside -->
@@ -171,26 +189,12 @@ Professional Experience {data-icon=suitcase}
 print_section(position_data, 'industry_positions')
 ```
 
-Research {data-icon=book}
---------------------------------------------------------------------------------
+<!-- Software {data-icon=laptop} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-```{r}
-print_section(position_data, 'research_positions')
-```
-
-Other {data-icon=newspaper}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'other_positions')
-```
-
-Software {data-icon=laptop}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'software')
-```
+<!-- ```{r} -->
+<!-- print_section(position_data, 'software') -->
+<!-- ``` -->
 
 Associations {data-icon=chart-line}
 --------------------------------------------------------------------------------
