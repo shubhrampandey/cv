@@ -145,6 +145,13 @@ Teaching Experience {data-icon=chalkboard-teacher}
 print_section(position_data, 'teaching_positions')
 ```
 
+Writing {data-icon=newspaper}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'writing_positions')
+```
+
 <!-- Professional Experience {data-icon=suitcase} -->
 <!-- -------------------------------------------------------------------------------- -->
 
@@ -157,13 +164,6 @@ Research {data-icon=book}
 
 ```{r}
 print_section(position_data, 'research_positions_resume')
-```
-
-Writing {data-icon=newspaper}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'writing_positions')
 ```
 
 <!-- Software {data-icon=laptop} -->

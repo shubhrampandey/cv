@@ -101,7 +101,7 @@ contact_info %>%
 Software {#open-source}
 --------------------------------------------------------------------------------
 
-All projects available at: <br /> [`antoinesoetewey.com/soft`](https://www.antoinesoetewey.com/software/)
+All projects available at: <br /> [antoinesoetewey.com/soft](https://www.antoinesoetewey.com/software/)
 
 
 <!-- Language Skills {#skills} -->
@@ -162,13 +162,6 @@ Teaching Experience {data-icon=chalkboard-teacher}
 print_section(position_data, 'teaching_positions')
 ```
 
-Research {data-icon=book}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'research_positions')
-```
-
 Writing {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
@@ -187,6 +180,13 @@ Industry Experience {data-icon=suitcase}
 
 ```{r}
 print_section(position_data, 'industry_positions')
+```
+
+Research {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'research_positions')
 ```
 
 <!-- Software {data-icon=laptop} -->
