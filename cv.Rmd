@@ -98,10 +98,20 @@ contact_info %>%
   glue_data("- <i class='fa fa-{icon}'></i> {contact}")
 ```
 
+Research {#research}
+--------------------------------------------------------------------------------
+
+See all publications, posters and talks at: <br /> [antoinesoetewey.com/research](https://www.antoinesoetewey.com/research/)
+
 Software {#open-source}
 --------------------------------------------------------------------------------
 
-All projects available at: <br /> [antoinesoetewey.com/soft](https://www.antoinesoetewey.com/software/)
+All projects available at: <br /> [antoinesoetewey.com/software](https://www.antoinesoetewey.com/software/)
+
+Languages {#languages}
+--------------------------------------------------------------------------------
+
+French: native, English: fluent, Dutch: intermediate
 
 
 <!-- Language Skills {#skills} -->
@@ -120,7 +130,7 @@ Disclaimer {#disclaimer}
 
 <!-- The source code is available at [github.com/AntoineSoetewey/cv](https://github.com/AntoineSoetewey/cv). -->
 
-Last updated on `r format(Sys.time(), '%B %d, %Y')`.
+<!-- Last updated on `r format(Sys.time(), '%B %d, %Y')`. -->
 
 
 
@@ -182,12 +192,12 @@ Industry Experience {data-icon=suitcase}
 print_section(position_data, 'industry_positions')
 ```
 
-Research {data-icon=book}
---------------------------------------------------------------------------------
+<!-- Research {data-icon=book} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-```{r}
-print_section(position_data, 'research_positions')
-```
+<!-- ```{r} -->
+<!-- print_section(position_data, 'research_positions') -->
+<!-- ``` -->
 
 <!-- Software {data-icon=laptop} -->
 <!-- -------------------------------------------------------------------------------- -->
@@ -203,12 +213,12 @@ Associations {data-icon=chart-line}
 print_section(position_data, 'associations')
 ```
 
-Languages {data-icon=language}
---------------------------------------------------------------------------------
+<!-- Languages {data-icon=language} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-```{r}
-print_section(position_data, 'languages')
-```
+<!-- ```{r} -->
+<!-- print_section(position_data, 'languages') -->
+<!-- ``` -->
 
 <!-- Selected Data Science Writing {data-icon=chart-line} -->
 <!-- -------------------------------------------------------------------------------- -->
