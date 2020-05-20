@@ -1,6 +1,6 @@
 ---
-title: "Antoine Soetewey's Resume"
-author: Antoine Soetewey
+title: "Shubhram Pandey's Resume"
+author: Shubhram Pandey
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
@@ -28,7 +28,7 @@ library(glue)
 using_googlesheets <- TRUE
 
 # Just the copied URL from the sheet
-positions_sheet_loc <- "https://docs.google.com/spreadsheets/d/1tuwOW1_quMx2u5BHrsR9ui_lcVAjcqphwhbWyA3hcuI/edit?usp=sharing"
+positions_sheet_loc <- "https://docs.google.com/spreadsheets/d/1F3iWMg4PAOesT8RuuN9ByjHUgNMryC69hStUiJA49n4/edit?usp=sharing"
 
 # Is this sheet available for anyone to read? If you're using a private sheet
 # set this to false and go to gather_data.R and run the data loading manually
@@ -62,8 +62,8 @@ position_data <- position_data %>%
   mutate(
     # Build some custom sections by collapsing others
     section = case_when(
-      section %in% c('research_positions', 'industry_positions') ~ 'positions', 
-      section %in% c('data_science_writings', 'by_me_press') ~ 'writings',
+      section %in% c('industry_positions') ~ 'positions', 
+      # section %in% c('data_science_writings', 'by_me_press') ~ 'writings',
       TRUE ~ section
     )
   ) 
@@ -76,6 +76,7 @@ Aside
 
 
 ![logo](logo.png){width=100%}
+`
 
 Contact {#contact}
 --------------------------------------------------------------------------------
@@ -86,35 +87,30 @@ contact_info %>%
 ```
 
 
+Language Skills {#skills}
+--------------------------------------------------------------------------------
 
-<!-- Language Skills {#skills} -->
+```{r}
+build_skill_bars(skills)
+```
+
+Office skills {#oSkills}
+--------------------------------------------------------------------------------
+
+```{r}
+build_skill_bars(oSkills) 
+```
+
+Packages {#open-source}
+--------------------------------------------------------------------------------
+
+Author of R package ["comEff"](https://github.com/shubhrampandey/comEff) used to run meta analysis for historical control evidences.
+
+Author of [COVID19 dashbaord](https://shubhrampandey.shinyapps.io/coronaVirusViz) developed in R shiny which allows users to forecast, pandemic height using infectious disease(SIR) modelling.
+
+<!-- More info {#more-info} -->
 <!-- -------------------------------------------------------------------------------- -->
-
-<!-- ```{r} -->
-<!-- build_skill_bars(skills) -->
-<!-- ``` -->
-
-Research {#research}
---------------------------------------------------------------------------------
-
-See all publications, posters and talks at: <br /> [antoinesoetewey.com/research](https://www.antoinesoetewey.com/research/)
-
-
-Software {#open-source}
---------------------------------------------------------------------------------
-
-All projects available at: <br /> [antoinesoetewey.com/software](https://www.antoinesoetewey.com/software/)
-
-Languages {#languages}
---------------------------------------------------------------------------------
-
-French: native, English: fluent, Dutch: intermediate
-
-
-More info {#more-info}
---------------------------------------------------------------------------------
-
-See full CV at: <br /> [antoinesoetewey.com/cv](https://www.antoinesoetewey.com/cv.html)
+<!-- [About me](https://www.shubhrampandey.com) -->
 
 
 Disclaimer {#disclaimer}
@@ -124,14 +120,15 @@ Disclaimer {#disclaimer}
 
 <!-- Source code: [github.com/AntoineSoetewey/cv](https://github.com/AntoineSoetewey/cv). -->
 
-<!-- Last updated on `r format(Sys.time(), '%B %d, %Y')`. -->
+This RESUME was developed using rmarkdown package in R v3.6.3. <br />
+Last updated on `r format(Sys.time(), '%B %d, %Y')`.
 
 
 
 Main
 ================================================================================
 
-Antoine Soetewey {#title}
+Shubhram Pandey {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -147,26 +144,34 @@ Education {data-icon=graduation-cap data-concise=true}
 position_data %>% print_section('education')
 ```
 
-Teaching Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'teaching_positions')
-```
-
-Writing {data-icon=newspaper}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'writing_positions')
-```
-
-<!-- Professional Experience {data-icon=suitcase} -->
+<!-- Teaching Experience {data-icon=chalkboard-teacher} -->
 <!-- -------------------------------------------------------------------------------- -->
 
 <!-- ```{r} -->
-<!-- print_section(position_data, 'industry_positions') -->
+<!-- print_section(position_data, 'education') -->
 <!-- ``` -->
+
+<!-- Writing {data-icon=newspaper} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- print_section(position_data, 'writing_positions') -->
+<!-- ``` -->
+
+Professional Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'positions')
+```
+
+AWARDS and ACHEIVEMENTS {data-icon=medal}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'awards_acheivements')
+```
+
 
 <!-- Research {data-icon=book} -->
 <!-- -------------------------------------------------------------------------------- -->
